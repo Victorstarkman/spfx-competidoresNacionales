@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "competidores-react-client-side-solution",
+    "id": "aa42b7bf-fdc9-401e-b369-92fa91d32091",
+    "version": "1.0.0.2",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.23.2"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "competidores-react description"
+      },
+      "longDescription": {
+        "default": "competidores-react description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "competidores-react Feature",
+        "description": "The feature that activates elements of the competidores-react solution.",
+        "id": "a7e58827-476a-4687-9760-3495e296c104",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/competidores-react.sppkg"
+  }
+}

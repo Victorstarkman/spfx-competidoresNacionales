@@ -1,0 +1,60 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Dependency directories
+node_modules
+
+# Build generated files
+dist
+lib
+lib-dts
+lib-commonjs
+lib-esm
+jest-output
+release
+solution
+temp
+*.sppkg
+.heft
+
+# Coverage directory used by tools like istanbul
+coverage
+
+# OSX
+.DS_Store
+
+# Visual Studio files
+.ntvs_analysis.dat
+.vs
+bin
+obj
+
+# Resx Generated Code
+*.resx.ts
+
+# Styles Generated Code
+*.scss.ts
+ Dependencias
+node_modules/
+
+# Compilacion SPFx
+lib/
+dist/
+temp/
+coverage/
+sharepoint/solution/
+
+# Certificados y archivos sensibles
+*.pem
+*.key
+.env
+.env.*
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

@@ -1,0 +1,184 @@
+.tarjeta {
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    min-height: 260px;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 20px;
+
+    background-color: #ffffff;
+    border: 1px solid #dce8e9;
+    border-top: 3px solid #078c87;
+    border-radius: 12px;
+
+    box-shadow: 0 3px 12px rgba(50, 85, 105, 0.07);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+
+    &:hover {
+        transform: translateY(-3px);
+        border-color: #a8d6d1;
+        box-shadow: 0 8px 22px rgba(50, 85, 105, 0.13);
+    }
+
+    &:focus-within {
+        border-color: #078c87;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        transition: none;
+
+        &:hover {
+            transform: none;
+        }
+    }
+}
+.empresa {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+
+    h3 {
+        flex: 1;
+        min-width: 0;
+        margin: 0;
+        color: #0d2d62;
+        font-size: 16px;
+        line-height: 1.3;
+        overflow-wrap: anywhere;
+    }
+}
+@container (max-width: 600px) {
+    .tarjeta {
+        padding: 14px;
+        min-height: 230px;
+    }
+
+    .empresa h3 {
+        font-size: 14px;
+    }
+
+    .iconoEmpresa {
+        width: 42px;
+        height: 42px;
+    }
+
+    .perfil {
+        font-size: 12px;
+        margin: 14px 0;
+    }
+
+    .cobertura {
+        font-size: 12px;
+    }
+
+    .acciones {
+        gap: 6px;
+        flex-wrap: wrap;
+    }
+    .empresa {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+
+    h3 {
+        flex: none;
+        width: 100%;
+        min-width: 0;
+        overflow-wrap: break-word;
+    }
+    }
+}
+
+.perfil {
+    margin: 20px 0;
+    color: #506984;
+    font-size: 14px;
+}
+
+.pieTarjeta {
+    margin-top: auto;
+}
+
+.cobertura {
+    color: #42698b;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.acciones {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.tipoActor {
+    padding: 8px 12px;
+    border-radius: 7px;
+    background: #e5f5f2;
+    color: #078c87;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.verFicha {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 8px 10px;
+    border: 1px solid #DCE8E9;
+    border-radius: 8px;
+
+    background: #F0F8F7;
+    color: #078C87;
+
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+        background: #E5F5F2;
+        border-color: #078C87;
+    }
+
+    &:focus-visible {
+        outline: 2px solid #078C87;
+        outline-offset: 2px;
+    }
+}
+.iconoEmpresa {
+    width: 54px;
+    height: 54px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 11px;
+    background-color: #eaf1f7;
+    color: #275878;
+
+    font-size: 16px;
+    font-weight: 700;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}

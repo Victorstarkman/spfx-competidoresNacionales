@@ -1,0 +1,223 @@
+.panelEdicion {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    background: #ffffff;
+}
+
+.encabezado {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+
+    padding: 18px 24px;
+    margin-bottom: 16px;
+
+    border-bottom: 1px solid #DCE8E9;
+
+    h2 {
+        margin: 0;
+        color: #526B80;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 1.4;
+        letter-spacing: -0.2px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        }
+}
+
+.botonCerrar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    flex-shrink: 0;
+    border: 1px solid #dce5ed;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #0d2d62;
+    font-size: 20px;
+    cursor: pointer;
+
+    &:hover {
+        background: #e5f5f2;
+        border-color: #078c87;
+    }
+}
+
+.contenido {
+    padding: 24px;
+}
+.opciones {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 5px;
+    margin-left:12px ;
+    margin-right: 6px;
+
+    button {
+        padding: 14px 8px;
+        border: 1px solid #dce5ed;
+        border-radius: 8px;
+        background: #ffffff;
+        color: #0d2d62;
+        font-size: 13px;
+        font-weight: 600;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+
+        &:hover {
+            background: #e5f5f2;
+            border-color: #078c87;
+        }
+    }
+
+    .activo {
+        background: #078c87;
+        color: #ffffff;
+        border-color: #078c87;
+
+        &:hover {
+            background: #066f6b;
+            color: #ffffff;
+        }
+    }
+}
+.bienvenida {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+
+    padding: 48px 24px;
+    text-align: center;
+    h3 {
+        margin: 0;
+        color: #526B80;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 1.4;
+        letter-spacing: -0.2px;
+    }
+
+    p {
+        max-width: 340px;
+        margin: 0;
+        color: #405a78;
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    span {
+        max-width: 340px;
+        color: #6d8098;
+        font-size: 12px;
+        line-height: 1.5;
+    }
+}
+
+.iconoBienvenida {
+    font-size: 42px;
+    color: #078c87;
+    margin-bottom: 8px;
+}
+.buscadorCompetidor {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px 20px 0;
+    
+    input {
+            width: 100%;
+            box-sizing: border-box;
+
+            padding: 12px 14px;
+            min-height: 44px;
+
+            background: #FFFFFF;
+            color: #526B80;
+
+            border: 1px solid #CCD8E4;
+            border-radius: 8px;
+
+            font-size: 13px;
+
+            &:focus {
+                background: #FFFFFF;
+                border-color: #58BDB4;
+                outline: 2px solid rgba(88, 189, 180, 0.18);
+                outline-offset: 1px;
+            }
+            &:-webkit-autofill,
+            &:-webkit-autofill:hover,
+            &:-webkit-autofill:focus {
+                -webkit-box-shadow: 0 0 0 1000px #FFFFFF inset;
+                -webkit-text-fill-color: #526B80;
+                caret-color: #526B80;
+            }
+    }
+    > button {
+        padding: 10px 12px;
+        text-align: left;
+        background: #f8fafc;
+        border: 1px solid #dce5ed;
+        border-radius: 6px;
+        cursor: pointer;
+
+        &:hover {
+            background: #e5f5f2;
+        }
+    }
+}
+.empresaSeleccionada {
+    margin-top: 20px;
+    padding: 16px;
+
+    background: #eaf7f5;
+    border: 1px solid #b7ded8;
+    border-left: 4px solid #078c87;
+    border-radius: 8px;
+
+    strong {
+        display: block;
+        color: #0d2d62;
+        font-size: 13px;
+        margin-bottom: 8px;
+    }
+
+    p {
+        margin: 0 0 6px;
+        color: #17385d;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    small {
+        color: #607d8b;
+        font-size: 12px;
+    }
+}
+
+.mensajeEliminacion {
+    color: #087443;
+    background-color: #eaf7ef;
+    border: 1px solid #b6dfc8;
+    border-radius: 6px;
+    padding: 10px 14px;
+    margin: 12px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+@media (max-width: 380px) {
+    .opciones {
+        grid-template-columns: 1fr;
+    }
+}

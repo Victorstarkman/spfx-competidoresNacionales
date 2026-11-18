@@ -1,0 +1,74 @@
+.textoConfirmacion {
+    margin: 0 0 8px 0;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #8b1e1e;
+}
+
+.idConfirmacion {
+    margin: 0 0 16px 0;
+    font-size: 12px;
+    color: #666;
+}
+.confirmacionEliminar {
+    box-sizing: border-box;
+    width: 100%;
+    margin-top: 16px;
+    padding: 18px;
+    border: 1px solid #e6b5b5;
+    border-left: 4px solid #c62828;
+    border-radius: 8px;
+    background-color: #fff5f5;
+}
+.botonConfirmarEliminar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    padding: 10px 16px;
+    border: 1px solid #D8A49F;
+    border-radius: 6px;
+
+   background-color: #FBE8E6;
+    color: #963D37;
+
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+
+   &:hover:not(:disabled) {
+        background-color: #F2D2CE;
+        border-color: #C57E77;
+        color: #812D28;
+    }
+    &:disabled {
+        background-color: #dddddd;
+        border-color: #dddddd;
+        color: #2e2e2e;
+        cursor: not-allowed;
+    }
+}
+// Mensaje de eliminación exitosa
+.mensajeExito {
+    color: #087443;
+    background-color: #eaf7ef;
+    border: 1px solid #b6dfc8;
+    border-radius: 6px;
+    padding: 10px 14px;
+    margin-top: 12px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+// Mensaje de error al eliminar
+.mensajeError {
+    color: #b42318;
+    background-color: #fef3f2;
+    border: 1px solid #fecdca;
+    border-radius: 6px;
+    padding: 10px 14px;
+    margin-top: 12px;
+    font-size: 13px;
+    font-weight: 600;
+}
