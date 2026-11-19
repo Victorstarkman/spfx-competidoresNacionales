@@ -8,6 +8,7 @@ import type { ICompetidor } from './models/ICompetidor';
 import type { IAntecedente } from './models/IAntecedents';
 import PanelEdicion from './PanelEdicion/PanelEdicion';
 import { createPortal } from 'react-dom';
+import PanelEstadistica from './PanelEstadistica/PanelEstadistica';
 
 const CompetidoresNacionales = (
   props: ICompetidoresNacionalesProps
@@ -19,6 +20,7 @@ const CompetidoresNacionales = (
   const [textoBusqueda,setTextoBusqueda]= React.useState<string>('')
   const [filtroTipoActor,setFiltroTipoActor] = React.useState<string>('Todos');
   const [panelEdicionAbierto,setPanelEdicionAbierto] = React.useState<boolean>(false);
+  const [panelEstadisticaAbierto, setPanelEstadisticaAbierto] = React.useState<boolean>(false);
   //filtros
    const competidoresOrdenados = [...competidoresReales].sort((a, b) => a.nombre.localeCompare(b.nombre,'es',{
     sensitivity: 'base'
@@ -183,6 +185,13 @@ const CompetidoresNacionales = (
               <button
                   type="button"
                   className={styles.botonAdministrar}
+                  onClick={() => setPanelEstadisticaAbierto(true)}
+              >
+                  Análisis de Mercado
+              </button>
+              <button
+                  type="button"
+                  className={styles.botonAdministrar}
                   onClick={() => setPanelEdicionAbierto(true)}
               >
                   Panel de Edición
@@ -270,6 +279,22 @@ const CompetidoresNacionales = (
           </div>
 
         </div>
+      )}
+      {panelEstadisticaAbierto && createPortal (
+          <div className= {styles.fondoDetalle}>
+            <div className={styles.panelDetalle}
+            role= "dialog"
+            aria-modal= "true"
+            aria-label='Panel de Analisis de Mercado'
+            >
+              <PanelEstadistica
+                competidores={competidoresReales}
+                onCerrar = {()=> setPanelEstadisticaAbierto(false)}
+                />
+            </div>
+
+          </div>,
+          document.body
       )}
     </section>
    )
