@@ -3,7 +3,7 @@
   "solution": {
     "name": "competidores-react-client-side-solution",
     "id": "aa42b7bf-fdc9-401e-b369-92fa91d32091",
-    "version": "1.0.1.2",
+    "version": "1.0.1.3",
     "includeClientSideAssets": true,
     "skipFeatureDeployment": true,
     "isDomainIsolated": false,

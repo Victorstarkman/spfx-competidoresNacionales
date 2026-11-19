@@ -258,3 +258,26 @@
     background: #078C87;
     border-radius: 6px;
 }
+@media (max-width: 600px) {
+
+    .leyendaGrafico {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 12px;
+        width: 100%;
+        max-width: none;
+    }
+
+    .itemLeyenda {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        min-width: 0;
+        margin-bottom: 0;
+
+        strong {
+            margin-left: auto;
+            white-space: nowrap;
+        }
+    }
+}
